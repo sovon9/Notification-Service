@@ -2,6 +2,9 @@ package com.sovon9.Notification_service.dto;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class GuestCommInfo implements Serializable
 {
 	/**
@@ -11,8 +14,10 @@ public class GuestCommInfo implements Serializable
 	private String firstName;
 	private String email;
 	private String phno;
-	
 	private Long resID;
+	private Long guestID;
+	private String action;
+	private int roomNum; 
 	
 	public GuestCommInfo()
 	{
@@ -49,6 +54,30 @@ public class GuestCommInfo implements Serializable
 	public void setResID(Long resID)
 	{
 		this.resID = resID;
+	}
+	public Long getGuestID()
+	{
+		return guestID;
+	}
+	public void setGuestID(Long guestID)
+	{
+		this.guestID = guestID;
+	}
+	public String getAction()
+	{
+		return action;
+	}
+	public void setAction(String action)
+	{
+		this.action = action;
+	}
+	public int getRoomNum()
+	{
+		return roomNum;
+	}
+	public void setRoomNum(int roomNum)
+	{
+		this.roomNum = roomNum;
 	}
 	
 }
